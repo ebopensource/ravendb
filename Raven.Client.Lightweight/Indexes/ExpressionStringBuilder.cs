@@ -2220,9 +2220,11 @@ namespace Raven.Client.Indexes
 
 	    private static bool ShouldEscapeConvert(UnaryExpression node)
 	    {
-
-	        if (node.Type.Name.Equals(node.Operand.Type.Name)) return true;
-            if (node.Type.Name.Equals("Double") && node.Operand.Type.Name.StartsWith("Int")) return true;
+		    var srcType = node.Operand.Type;
+		    if (node.Type == srcType) 
+				return true;
+            if (node.Type == typeof(double))
+				return srcType == typeof(int) || srcType == typeof(float) || srcType == typeof(long);
 	        return false;
 	    }
 		private static bool ShouldConvert(Type nonNullableType)
