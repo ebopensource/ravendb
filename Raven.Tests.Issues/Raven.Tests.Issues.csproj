@@ -120,6 +120,7 @@
     <Compile Include="BulkInsertClient.cs" />
     <Compile Include="BulkInsertDatabaseUrl.cs" />
     <Compile Include="BulkInsertTests.cs" />
+    <Compile Include="EventBookingTests.cs" />
     <Compile Include="RaqvenDB_3222.cs" />
     <Compile Include="RavenDB-3136.cs" />
     <Compile Include="RavenDB-3150.cs" />
