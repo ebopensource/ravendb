@@ -8,6 +8,7 @@ namespace Raven.Tests.Issues
 {
 	public class EventBookingTests : RavenTest
 	{
+		// 3543
 		[Fact]
 		public void Read_only_property_is_accessed_during_deserialization()
 		{
